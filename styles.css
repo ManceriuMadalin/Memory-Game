@@ -49,8 +49,8 @@
 
 .restartBtn {
      position: absolute;
-     height: 10vh;
-     width: 20vw;
+     text-align: center;
+     padding: 10px 25px;
      border-radius: 5vh;
      border: 5px #B0DAFF dashed;
      font-family: 'Roboto';
