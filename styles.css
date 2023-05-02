@@ -105,7 +105,7 @@
 
 @media screen and (max-width: 680px) {
      .container {
-          height: 55vh;
+          height: 95vw;
           width: 95vw;
      }
 }
