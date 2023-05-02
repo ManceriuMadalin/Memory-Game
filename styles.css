@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.clock {
+     font-family: 'Roboto';
+     position: absolute;
+     top: 10px;
+     left: calc((100vw - 75px) / 2);
+     height: 75px;
+     width: 75px;
+     display: grid;
+     place-items: center;
+}
+
+#timer {
+     font-size: 2em;
+}
+
+#counter {
+     position: absolute;
+     z-index: -1;
+     height: 75px;
+     width: 75px;
+     border-radius: 50%;
+     background: conic-gradient(#1FA0FF, #12DAFB, #A7FDCC);
+}
+
+#restartBg {
+     position: absolute;
+     display: none;
+     top: 0;
+     left: 0;
+     height: 100vh;
+     width: 100vw;
+     background: rgba(255, 255, 255, 0);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(7.1px);
+     -webkit-backdrop-filter: blur(7.1px);
+     z-index: 1000;
+}
+
+#status {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     top: 50px;
+     font-family: 'roboto';
+     font-size: 3em;
+}
+
+.restartBtn {
+     position: absolute;
+     height: 10vh;
+     width: 20vw;
+     border-radius: 5vh;
+     border: 5px #B0DAFF dashed;
+     font-family: 'Roboto';
+     font-size: 2em;
+     background-color: #f0ffff;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 1001;
+}
+
+.counter {
+     margin: 0;
+     animation: rotate 1s infinite;
+}
+
+.container {
+     position: absolute;
+     left: 50%;
+     top: calc(50% + 75px);
+     transform: translate(-50%, -50%);
+     height: 75vh;
+     width: 75vh;
+     justify-content: space-around;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.cell {
+     margin-inline: 2%;
+     width: 20%;
+     height: 20%;
+}
+
+.cell>div {
+     position: absolute;
+     width: 20%;
+     height: 20%;
+     background: linear-gradient(45deg, #1FA0FF, #12DAFB, #A7FDCC);
+     border-radius: 15%;
+     transition: all 1s;
+}
+
+.second {
+     z-index: -1;
+}
+
+.first {
+     display: grid;
+     place-items: center;
+}
+
+@media screen and (max-width: 680px) {
+     .container {
+          height: 55vh;
+          width: 95vw;
+     }
+}
+
+@keyframes rotate {
+     from {
+          transform: rotateZ(0deg);
+     }
+
+     to {
+          transform: rotateZ(360deg);
+     }
+}
